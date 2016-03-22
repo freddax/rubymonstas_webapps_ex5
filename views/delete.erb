@@ -1,0 +1,17 @@
+<h1>Delete Member</h1>
+
+<p>Do you really want to remove the member <%= @member.name %>?</p>
+
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
+
+<form action= "/members/<%= @member.name %>" method="post" >
+  <input name="_method" type="hidden" value="delete" />
+  <input type= "submit" value="Remove Member"/>
+</form>
+
+</br>
+</br>
+<p>Go back to <a href="/members">All Members</a></p>

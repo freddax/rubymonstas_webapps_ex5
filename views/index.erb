@@ -1,0 +1,20 @@
+
+<h1>List of members</h1>
+
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
+<ul>
+  <% @members.each do |member| %>
+    <li>
+      <a href="/members/<%= member.id %>"><%= member.name %></a>
+      <a class="edit" href="/members/<%= member.id %>/edit">Edit</a>
+      <a class="edit" href="/members/<%= member.id %>/delete">Delete</a>
+    </li>
+  <% end %>
+</ul>
+
+<form action="/members/new" method="get">
+<button>New Member</button>
+</form>

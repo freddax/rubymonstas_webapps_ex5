@@ -1,0 +1,19 @@
+<h1>Edit Member Details</h1>
+
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
+
+<p><%= @member.name %></p>
+
+<form action= "/members/<%= @member.name %>" method="post" >
+  <input type="text" name="name" value="" />
+  <input name="_method" type="hidden" value="put" />
+  <input type= "submit" />
+</form>
+
+</br>
+</br>
+
+<p>Go back to <a href="/members">All Members</a></p>

@@ -1,0 +1,18 @@
+<h1>Member's Details</h1>
+
+<%
+# das ist ein Kommentar in erb
+%>
+
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
+
+<p><%= @member.name %></p>
+
+<a class="edit" href="/members/<%=@member.id%>/edit">Edit</a>
+<a class="edit" href="/members/<%= @member.id %>/delete">Delete</a>
+</br>
+</br>
+<p>Go back to <a href="/members">All Members</a></p>

@@ -1,0 +1,17 @@
+<h1>Add new member</h1>
+
+<form action= "/members" method="post">
+  <input type="text" name="name" value="" />
+  <input type= "submit" />
+</form>
+
+<% #value = "<%= @member.name %>
+<% #this is not necessary, value can remain empty%>
+
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
+
+
+<p>Go back to <a href="/members">All Members</a></p>
